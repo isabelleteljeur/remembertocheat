@@ -1,0 +1,58 @@
+##function cheat with code for questions Q3.1.2, Q3.1.6, Q3.1.9, & Q3.1.17
+
+cheat <- function(exercise) {
+  Q3.1.2 <- quote(
+    'schiphol_temp <- read.csv("https://bit.ly/3GLVQ86")
+schiphol_temp
+colnames(schiphol_temp)
+plot(
+  schiphol_temp$DATE,
+  schiphol_temp$TAVG,
+  xlab = "Time",
+  ylab = "Average Temperature (TAVG)"
+)')
+
+  Q3.1.6 <- quote(
+    'library(dplyr)
+
+data("Orange")
+orange_1 <- Orange %>%
+  group_by(Tree) %>%
+  mutate(max_circumference = max(circumference)) %>%
+  select(Tree, max_circumference) %>%
+  unique()
+
+ggplot(data = orange_1, aes(x = reorder(Tree, X = 1:5), y = max_circumference)) +
+  geom_bar(stat = "identity") +
+  xlab("Tree") +
+  ylab("max_circumference")')
+
+  Q3.1.9 <- quote(
+    'install.packages("ggstatsplot")
+library(ggstatsplot)
+data("ToothGrowth")
+ggplot(data = ToothGrowth, aes(x= supp, y = len)) +
+  geom_bar(stat = "identity") +
+  xlab("Supplement Type") +
+  ylab("Tooth Length")')
+
+  Q3.1.17 <- quote(
+    'factorial_vector <- c(1:10)
+factorial_vector
+for (x in factorial_vector) {
+  facto <- factorial(x)
+  print(paste("The factorial of", x, "is", facto))
+}')
+
+  if(exercise=="Q3.1.2")
+    cat(Q3.1.2)
+  else if(exercise == "Q3.1.6")
+    cat(Q3.1.6)
+  else if(exercise == "Q3.1.9")
+    cat(Q3.1.9)
+  else if (exercise == "Q3.1.17")
+    cat(Q3.1.17)
+}
+
+cheat()
+

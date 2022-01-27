@@ -1,0 +1,13 @@
+\name{Cheat Function}
+\alias{Cheat Function}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{
+%%  Cheat(ExcerciseNo) Function to nail your exam questions!
+}
+\description{
+%%  You can use the cheat function by entering the question number into the function. This works for Questions Q3.1.2, Q3.1.6, Q3.1.9m Q3.1.17 of the PIPS course.
+}
+\usage{
+cheat("Q3.1. ...")
+}
+
